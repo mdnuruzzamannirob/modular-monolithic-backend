@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from 'express';
 // import { registerUser, loginUser } from "./user.controller";
 // import { validate } from "../../core/middleware/validate.middleware";
 // import { registerSchema, loginSchema } from "./user.validation";
@@ -6,10 +6,10 @@ import { Router } from "express";
 const router = Router();
 
 router.post(
-  "/register",
+  '/register',
   (req, res) => {
-    console.log("running");
-  }
+    console.log('running');
+  },
   // validate(registerSchema), registerUser
 );
 // router.post(

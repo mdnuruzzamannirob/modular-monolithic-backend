@@ -1,4 +1,4 @@
-import { BaseEntity, ISODate, UUID } from "../../core/interfaces/baseEntity";
+import { BaseEntity, ISODate, UUID } from '../../core/interfaces/baseEntity';
 
 export interface User extends BaseEntity {
   firstName: string;
@@ -10,7 +10,7 @@ export interface User extends BaseEntity {
   passwordHash: string;
   defaultStore?: UUID;
   defaultWarehouse?: UUID;
-  status: "active" | "inactive" | "banned";
+  status: 'active' | 'inactive' | 'banned';
   lastLoginAt?: ISODate;
   tenantId?: UUID;
 }

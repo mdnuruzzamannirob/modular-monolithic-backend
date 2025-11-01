@@ -1,7 +1,4 @@
-import {
-  TGenericErrorResponse,
-  TErrorSources,
-} from "../interfaces/error.interface";
+import { TGenericErrorResponse, TErrorSources } from '../interfaces/error.interface';
 
 const duplicateErrorHandler = (err: any): TGenericErrorResponse => {
   // Extract value within double quotes using regex
@@ -12,14 +9,14 @@ const duplicateErrorHandler = (err: any): TGenericErrorResponse => {
 
   const errorSources: TErrorSources = [
     {
-      path: "",
+      path: '',
       message: `${extractedMessage} is already exists`,
     },
   ];
 
   return {
     status: 400,
-    message: "Invalid ID",
+    message: 'Invalid ID',
     errorSources,
   };
 };

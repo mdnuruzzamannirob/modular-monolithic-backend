@@ -1,8 +1,5 @@
-import { CastError } from "mongoose";
-import {
-  TGenericErrorResponse,
-  TErrorSources,
-} from "../interfaces/error.interface";
+import { CastError } from 'mongoose';
+import { TGenericErrorResponse, TErrorSources } from '../interfaces/error.interface';
 
 const castErrorHandler = (err: CastError): TGenericErrorResponse => {
   const errorSources: TErrorSources = [
@@ -14,7 +11,7 @@ const castErrorHandler = (err: CastError): TGenericErrorResponse => {
 
   return {
     status: 400,
-    message: "Invalid ID",
+    message: 'Invalid ID',
     errorSources,
   };
 };
